@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Table</title>
+</head>
+<body>
+
+<table border="1" id="studentsTable">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Track</th>
+        <th>Image</th>
+    </tr>
+</table>
+
+<script>
+    var studentsInfo = [
+    ['ali', 'ali@gmail.com', '01020222', 'php', 'ali.jpg'],
+    ['mona', 'mona@gmail.com', '0105555', 'html', 'mona.jpg'],
+    ['ahmed', 'ahmed@gmail.com', '010666', 'laravel', 'ahmed.jpg']
+];
+
+var table = document.getElementById("studentsTable");
+
+for (let i = 0; i < studentsInfo.length; i++) {
+    let row = "<tr>";
+
+    for (let j = 0; j < studentsInfo[i].length; j++) {
+        if (j === 4) {
+            row += `<td><img src="${studentsInfo[i][j]}" width="50"></td>`;
+        } else {
+            row += `<td>${studentsInfo[i][j]}</td>`;
+        }
+    }
+
+    row += "</tr>";
+    table.innerHTML += row;
+}
+</script>
+</body>
+</html>

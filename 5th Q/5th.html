@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript tips</title>
+
+</head>
+<body>
+  
+  <script>
+    let tips = [ "Always use let or const instead of var to avoid scope issues.", "JavaScript is case-sensitive: myVar and myvar are different.", "Use === instead of == to avoid unexpected type coercion.", "Arrays and objects are reference types, not primitive values.", "Use console.log() to debug and understand your code.", "Functions help you reuse code and keep it organized.", "JavaScript runs from top to bottom unless controlled by conditions or loops.", "Math.random() generates a number between 0 and 1.", "DOM manipulation allows JavaScript to interact with HTML elements.", "Practice is the fastest way to get better at JavaScript."];
+
+    randomTip = tips[Math.floor((Math.random() * tips.length))];
+
+    document.body.textContent = randomTip;
+  </script>
+</body>
+</html>
